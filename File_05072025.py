@@ -51,4 +51,6 @@ print(dict1.keys())
 print(dict1.values())
 print(type(dict1.values()))
 
-dict2={"name":'Muniappan', "name":"Devi"}
+# duplicae keys are allowed and the latest key will replace the old value
+dict2={"name":'name1', "name":"name2"}
+print(dict2) # {'name': 'name2'}
