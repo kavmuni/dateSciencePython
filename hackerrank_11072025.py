@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    print(type(arr))
+    arr_list = list(arr)
+    print(arr_list)
+    arr_set_list = list(set(arr_list))
+    print(arr_set_list)
+    arr_set_list.sort()
+    arr_set_list.reverse()
+    print(arr_set_list)
+    print(f"The runner up is {arr_set_list[1]}")
