@@ -1,4 +1,8 @@
 def insertionSort(list1):
+    """
+    :param list1: Parameter is to given as a list
+    :return: Returns a list which is sorted in ascending order
+    """
     for i in range(1, len(list1)):
         print(f"iteration {i}")
         pos = list1[i]
