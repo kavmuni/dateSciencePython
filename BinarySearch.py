@@ -9,10 +9,10 @@ def binarySearch(list1, find_):
     #if type(list1) == "<class 'list'>":
     left = 0
     right = len(list1) - 1
-    #print(left, right)
+    print(left, right)
     while left <= right:
         mid = (left + right) //2
-        #print(mid, list1[mid])
+        print(mid, list1[mid],"test")
         if list1[mid] == find_:
             return mid
         elif list1[mid] < find_:
@@ -21,5 +21,5 @@ def binarySearch(list1, find_):
             right = mid - 1
     return -1
 
-ind = binarySearch([1,3,5,7,9], 100)
+ind = binarySearch([1,3,5,7,9], 3)
 print(f"index is {ind}")

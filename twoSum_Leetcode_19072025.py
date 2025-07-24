@@ -31,7 +31,7 @@
 #                 #return list1
 #                 print(list1)
 #                 print("*************")
-
+import big_o
 def twoSum(nums, target):
     diff = {}
     # key is the number in list and value is the index of list
@@ -46,3 +46,16 @@ def twoSum(nums, target):
 
 twoSum([3, 2, 3], 6)
 
+
+# dictionary with enumerate
+
+def twosUmsDict(nums, target):
+    sums = {}
+    for i, num in enumerate(nums):
+        diff = target - num
+        if diff in sums:
+            return [sums.get(diff), i]
+        sums[num] = i
+        print(sums)
+        return []
+twoSum([3, 2, 3], 6)
