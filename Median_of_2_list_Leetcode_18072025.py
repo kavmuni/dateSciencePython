@@ -9,17 +9,18 @@ def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
             lvMedian = fullList[(len_fullList-1)//2]
         print(lvMedian)
 
-
-findMedianSortedArrays("self", [1,3], [2])
+a = [1, 12, 15, 26, 38]
+b = [2, 13, 17, 30, 45, 60]
+findMedianSortedArrays("self", a, b)
 
 ## using Binary search method
 # constraints: Array should be sorted
-def findMedianBinarySort(nums1):
-    #even though arrays are sorted individually when combined we should sort it again
-    """
-    Given 2 arrays are already sorted, so find median 2 arrays separate and find combined average
-    """
-    left = 0
-    right = len(nums1) - 1
-    while left <= right:
-        left += 1
+# def findMedianBinarySort(nums1):
+#     #even though arrays are sorted individually when combined we should sort it again
+#     """
+#     Given 2 arrays are already sorted, so find median 2 arrays separate and find combined average
+#     """
+#     left = 0
+#     right = len(nums1) - 1
+#     while left <= right:
+#         left += 1
