@@ -1,28 +1,28 @@
-class count_and_say:
-    def digts_and_freq(string1:str):
-        if not string1:
+class Solution:
+    def countAndSay(self, n: int) -> str:
+        print(f"value of n is {n}")
+        if n == 0:
             return -1
+        if n == 1:
+            return "1"
+            # why function is NOT coming out here when I give n > 1
+        # I am returning a string necessarly
+        prev = self.countAndSay(n - 1)
+        print(f"prev: {prev}")
+        res, i = "", 0
+        while i < len(prev):
+            print(f"i: {i}")
+            count = 1
+            print(f"i+1: {i + 1} and len(prev): {len(prev)}")
+            while i + 1 < len(prev) and prev[i] == prev[i + 1]:
+                print(f"i+1: {i + 1} and len(prev): {len(prev)} and prev[i] = {prev[i]} and prev[i + 1]: {prev[i + 1]}")
+                i += 1
+                count += 1
+            res += str(count) + prev[i]
+            print(f"value of res = {res}")
+            i += 1
+        return res
 
-        lv_main_list = []
-        lv_count = 0
-        lv_string = string1[0]
-
-        for i in string1:
-            lv_list = []
-            #lv_count += 1
-            print(i, lv_count, lv_string)
-            if lv_string == i:
-                lv_count += 1
-            else:
-                lv_count = 1
-
-            lv_list = [lv_count, int(i)]
-            print(i, lv_count, lv_string, lv_list)
-            lv_main_list.append(lv_list)
-            lv_string = i
-
-        print(lv_main_list)
-        return lv_main_list
-
-solution = count_and_say
-solution.digts_and_freq("11223")
+sol=Solution() # Create an instance of the Solution class
+res = sol.countAndSay(2) # Pass a value for 'n'
+print(res)

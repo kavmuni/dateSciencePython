@@ -5,7 +5,7 @@ class possible_paranthesis:
         #print("Coming into the body")
         # recursion function
         def get_combination(string, left, right):
-            print(f"Starting Iteration - left = {left} and right = {right}")
+            print(f"Starting Iteration - left = {left} and right = {right}, string = {string}")
             if left == 0 and right == 0:
                 result.append(string)
                 return
@@ -16,7 +16,7 @@ class possible_paranthesis:
             if right > left:
                 get_combination(string + ')', left, right - 1)
             print(f"3.{result}, left = {left}, right = {right}, string = {string}")
-            print("********************")
+            print("###############")
 
         print(f"********************{s}")
         get_combination('', s, s)
