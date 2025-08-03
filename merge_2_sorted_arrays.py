@@ -80,5 +80,6 @@ def merge_2_sorted_list(nums1, nums2):
     print(sorted_array)
     return sorted_array
 
-merge_2_sorted_list([1,3,5,7], [2,4,6,8])
+# constraint - Both inout arrays has to be sorted
+merge_2_sorted_list([1,3,5,7, 15], [2,4,6,8,9,11])
 
